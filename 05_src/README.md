@@ -6,12 +6,12 @@
 
 | 文件 | 版本 | 状态 | 说明 |
 |------|------|------|------|
-| `mt5_assistant_cn.py` | **新版（推荐）** | 已修复 | 黄金专用版，修复了计算逻辑和表格显示问题 |
-| `main_original.py` | 旧版 | 有Bug | 从原 MT5-Trading-Assistant 仓库合并的通用版本 |
+| `02_mt5_assistant_cn.py` | **新版（推荐）** | 已修复 | 黄金专用版，修复了计算逻辑和表格显示问题 |
+| `01_main_original.py` | 旧版 | 有Bug | 从原 MT5-Trading-Assistant 仓库合并的通用版本 |
 
 ---
 
-## 新版（推荐）- mt5_assistant_cn.py
+## 新版（推荐）- 02_mt5_assistant_cn.py
 
 **特点：**
 - 专为黄金（XAU/USD）交易优化
@@ -22,10 +22,10 @@
 
 **运行：**
 ```bash
-python mt5_assistant_cn.py
+python 02_mt5_assistant_cn.py
 ```
 
-## 旧版 - main_original.py
+## 旧版 - 01_main_original.py
 
 **来源：** [MT5-Trading-Assistant](https://github.com/ruchid123123/MT5-Trading-Assistant) 仓库
 
@@ -46,8 +46,8 @@ pip install PyQt5 MetaTrader5
 
 ## 功能对比
 
-| 功能 | 新版 mt5_assistant_cn.py | 旧版 main_original.py |
-|------|-------------------------|---------------------|
+| 功能 | 新版 02_mt5_assistant_cn.py | 旧版 01_main_original.py |
+|------|---------------------------|------------------------|
 | 黄金专用计算 | 是 | 否（通用） |
 | 自动获取价格 | 是 | 否 |
 | 计算准确性 | 已修复 | 有Bug |
@@ -56,7 +56,7 @@ pip install PyQt5 MetaTrader5
 
 ## 建议
 
-**推荐使用 `mt5_assistant_cn.py`**，旧版仅供对比参考。
+**推荐使用 `02_mt5_assistant_cn.py`**，旧版仅供对比参考。
 
 ## 免责声明
 

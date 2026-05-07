@@ -6,34 +6,34 @@
 
 ```
 .
-├── src/                           # 源代码（包含新旧版本）
-│   ├── mt5_assistant_cn.py       # [新版推荐] 黄金专用修复版
-│   ├── main_original.py          # [旧版存档] 原始通用版（有Bug）
-│   └── README.md                 # 版本对比说明
-├── original/                      # 原始/逆向出来的文件
+├── 01_original/                   # 原始/逆向出来的文件
 │   ├── mt5tradingassistant.py
 │   ├── mt5tradingassistant.pyc
 │   ├── mt5tradingassistant.dis
 │   └── README.md
-├── extracted/                     # 提取的运行时库
+├── 02_extracted/                  # 提取的运行时库
 │   ├── PYZ-00.pyz
 │   ├── base_library.zip
 │   ├── MetaTrader5/
 │   ├── PyQt5/
 │   ├── numpy/
 │   └── README.md
-├── research/                      # 逆向工程资料
-│   ├── README_REVERSE_ENGINEERING.md
-│   ├── raw_decompiled.py
-│   └── README.md
-├── tools/                         # 逆向分析工具
+├── 03_tools/                      # 逆向分析工具
 │   ├── check_header.py
 │   ├── disassemble_pyc.py
 │   ├── extract_strings.py
 │   ├── extract_strings_v2.py
 │   ├── test_marshal.py
 │   └── README.md
-└── assets/                        # 资源文件
+├── 04_research/                   # 逆向工程资料
+│   ├── README_REVERSE_ENGINEERING.md
+│   ├── raw_decompiled.py
+│   └── README.md
+├── 05_src/                        # 源代码（包含新旧版本）
+│   ├── 01_main_original.py       # [旧版存档] 原始通用版（有Bug）
+│   ├── 02_mt5_assistant_cn.py    # [新版推荐] 黄金专用修复版
+│   └── README.md                 # 版本对比说明
+└── 06_assets/                     # 资源文件
     ├── logo.ico
     ├── logo.jpeg
     └── README.md
@@ -43,17 +43,17 @@
 
 **推荐使用新版（已修复）：**
 ```bash
-cd src
-python mt5_assistant_cn.py
+cd 05_src
+python 02_mt5_assistant_cn.py
 ```
 
 ## 版本说明
 
 本项目合并了两个仓库的内容：
-- **新版代码**：今天修复的黄金专用版（`src/mt5_assistant_cn.py`）
-- **旧版代码**：原 MT5-Trading-Assistant 仓库的通用版（`src/main_original.py`）
+- **新版代码**：今天修复的黄金专用版（`05_src/02_mt5_assistant_cn.py`）
+- **旧版代码**：原 MT5-Trading-Assistant 仓库的通用版（`05_src/01_main_original.py`）
 
-详见 `src/README.md` 了解两个版本的具体差异。
+详见 `05_src/README.md` 了解两个版本的具体差异。
 
 ## 依赖安装
 
@@ -99,7 +99,7 @@ pip install PyQt5 MetaTrader5
 1. 必须先运行 MetaTrader 5 并登录账户才能使用连接功能
 2. 移动止盈功能会在后台运行，关闭程序会停止监控
 3. 建议先用模拟账户测试所有功能
-4. **旧版 `main_original.py` 存在计算Bug，仅供参考对比**
+4. **旧版 `01_main_original.py` 存在计算Bug，仅供参考对比**
 
 ## 相关仓库
 
@@ -118,6 +118,7 @@ pip install PyQt5 MetaTrader5
 - 修复表格显示问题
 - 新增盈亏比计算
 - 重新整理目录结构
+- 添加数字编号
 
 ### v1.0 (2025-04-19)
 - 初始版本（MT5-Trading-Assistant 仓库）
